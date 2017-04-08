@@ -47,30 +47,30 @@ if (process.argv[2] === "spotify-this-song") {
                 console.log("Name of Song: " + data.tracks.items[i]["name"]);
                 console.log("Artist: " + data.tracks.items[i].artists[0].name);
                 fs.appendFile("../log.txt", "--------------------", function(err) {
-                            if (err) {
-                                console.log(err);
-                            }
-                        });
-                        fs.appendFile("../log.txt", "Album Name: " + data.tracks.items[i].album["name"], function(err) {
-                            if (err) {
-                                console.log(err);
-                            }
-                        });
-                        fs.appendFile("../log.txt", "Preview URL: " + data.tracks.items[i]["preview_url"], function(err) {
-                            if (err) {
-                                console.log(err);
-                            }
-                        });
-                        fs.appendFile("../log.txt", "Name of Song: " + data.tracks.items[i]["name"], function(err) {
-                            if (err) {
-                                console.log(err);
-                            }
-                        });
-                        fs.appendFile("../log.txt", "Artist: " + data.tracks.items[i].artists[0].name, function(err) {
-                            if (err) {
-                                console.log(err);
-                            }
-                        });
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+                fs.appendFile("../log.txt", "Album Name: " + data.tracks.items[i].album["name"], function(err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+                fs.appendFile("../log.txt", "Preview URL: " + data.tracks.items[i]["preview_url"], function(err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+                fs.appendFile("../log.txt", "Name of Song: " + data.tracks.items[i]["name"], function(err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                });
+                fs.appendFile("../log.txt", "Artist: " + data.tracks.items[i].artists[0].name, function(err) {
+                    if (err) {
+                        console.log(err);
+                    }
+                });
             }
         }
     });
@@ -315,3 +315,4 @@ if (process.argv[2] === "do-what-it-says") {
         }
     });
 }
+
