@@ -53,9 +53,7 @@ if (process.argv[2] === "spotify-this-song") {
                 fs.appendFile("../log.txt", "Artist: " + data.tracks.items[i].artists[0].name);
             }
         }
-
     });
-
 }
 
 if (process.argv[2] === "my-tweets") {
@@ -102,7 +100,6 @@ if (process.argv[2] === "movie-this") {
             fs.appendFile("../log.txt", "Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"]);
         }
     });
-
 }
 
 if (process.argv[2] === "do-what-it-says") {
@@ -134,12 +131,8 @@ if (process.argv[2] === "do-what-it-says") {
                         fs.appendFile("../log.txt", "Artist: " + data.tracks.items[i].artists[0].name);
                     }
                 }
-
             });
-
         }
-
-
         if (command === "movie-this") {
             request("http://www.omdbapi.com/?t=" + searchItem + "&tomatoes=true", function(error, response, body) {
 
@@ -166,9 +159,7 @@ if (process.argv[2] === "do-what-it-says") {
                     fs.appendFile("../log.txt", "Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"]);
                 }
             });
-
         }
-
         if (command === "my-tweets") {
             var params = { screen_name: 'heyyonate' };
             client.get('statuses/user_timeline', params, function(error, tweets, response) {
@@ -186,9 +177,5 @@ if (process.argv[2] === "do-what-it-says") {
                 }
             });
         }
-
-
-
     });
-
 }
