@@ -64,17 +64,17 @@ if (process.argv[2] === "my-tweets") {
                 console.log(tweets[i].text);
                 console.log(tweets[i].created_at);
                 console.log("-----------------------");
-                fs.appendFile("../log.txt", tweets[i].text, function(err){
+                fs.appendFile("../log.txt", tweets[i].text, function(err) {
                     if (err) {
                         console.log(err);
                     }
                 });
-                fs.appendFile("../log.txt", tweets[i].created_at, function(err){
+                fs.appendFile("../log.txt", tweets[i].created_at, function(err) {
                     if (err) {
                         console.log(err);
                     }
                 });
-                fs.appendFile("../log.txt", "-----------------------", function(err){
+                fs.appendFile("../log.txt", "-----------------------", function(err) {
                     if (err) {
                         console.log(err);
                     }
@@ -101,51 +101,51 @@ if (process.argv[2] === "movie-this") {
             console.log("Actors: " + JSON.parse(body)["Actors"]);
             console.log("Rotten Tomatoes: " + JSON.parse(body).Ratings[1]["Value"]);
             console.log("Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"]);
-            fs.appendFile("../log.txt", "Title: " + JSON.parse(body).Title, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Release Year: " + JSON.parse(body).Year, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "The movie's rating is: " + JSON.parse(body).imdbRating, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Produced in: " + JSON.parse(body)["Country"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Language: " + JSON.parse(body).Language, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Plot: " + JSON.parse(body).Plot, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Actors: " + JSON.parse(body)["Actors"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Rotten Tomatoes: " + JSON.parse(body).Ratings[1]["Value"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
+            fs.appendFile("../log.txt", "Title: " + JSON.parse(body).Title, function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "Release Year: " + JSON.parse(body).Year, function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "The movie's rating is: " + JSON.parse(body).imdbRating, function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "Produced in: " + JSON.parse(body)["Country"], function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "Language: " + JSON.parse(body).Language, function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "Plot: " + JSON.parse(body).Plot, function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "Actors: " + JSON.parse(body)["Actors"], function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "Rotten Tomatoes: " + JSON.parse(body).Ratings[1]["Value"], function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
+            fs.appendFile("../log.txt", "Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"], function(err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
         }
     });
 }
@@ -172,31 +172,31 @@ if (process.argv[2] === "do-what-it-says") {
                         console.log("Preview URL: " + data.tracks.items[i]["preview_url"]);
                         console.log("Name of Song: " + data.tracks.items[i]["name"]);
                         console.log("Artist: " + data.tracks.items[i].artists[0].name);
-                        fs.appendFile("../log.txt", "--------------------", function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-                        fs.appendFile("../log.txt", "Album Name: " + data.tracks.items[i].album["name"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-                        fs.appendFile("../log.txt", "Preview URL: " + data.tracks.items[i]["preview_url"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-                        fs.appendFile("../log.txt", "Name of Song: " + data.tracks.items[i]["name"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-                        fs.appendFile("../log.txt", "Artist: " + data.tracks.items[i].artists[0].name, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
+                        fs.appendFile("../log.txt", "--------------------", function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
+                        fs.appendFile("../log.txt", "Album Name: " + data.tracks.items[i].album["name"], function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
+                        fs.appendFile("../log.txt", "Preview URL: " + data.tracks.items[i]["preview_url"], function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
+                        fs.appendFile("../log.txt", "Name of Song: " + data.tracks.items[i]["name"], function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
+                        fs.appendFile("../log.txt", "Artist: " + data.tracks.items[i].artists[0].name, function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
                     }
                 }
             });
@@ -216,51 +216,51 @@ if (process.argv[2] === "do-what-it-says") {
                     console.log("Actors: " + JSON.parse(body)["Actors"]);
                     console.log("Rotten Tomatoes: " + JSON.parse(body).Ratings[1]["Value"]);
                     console.log("Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"]);
-                    fs.appendFile("../log.txt", "Title: " + JSON.parse(body).Title, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Release Year: " + JSON.parse(body).Year, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "The movie's rating is: " + JSON.parse(body).imdbRating, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Produced in: " + JSON.parse(body)["Country"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Language: " + JSON.parse(body).Language, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Plot: " + JSON.parse(body).Plot, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Actors: " + JSON.parse(body)["Actors"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Rotten Tomatoes: " + JSON.parse(body).Ratings[1]["Value"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-            fs.appendFile("../log.txt", "Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"], function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
+                    fs.appendFile("../log.txt", "Title: " + JSON.parse(body).Title, function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "Release Year: " + JSON.parse(body).Year, function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "The movie's rating is: " + JSON.parse(body).imdbRating, function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "Produced in: " + JSON.parse(body)["Country"], function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "Language: " + JSON.parse(body).Language, function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "Plot: " + JSON.parse(body).Plot, function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "Actors: " + JSON.parse(body)["Actors"], function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "Rotten Tomatoes: " + JSON.parse(body).Ratings[1]["Value"], function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
+                    fs.appendFile("../log.txt", "Rotten Tomatoes URL: " + JSON.parse(body)["tomatoURL"], function(err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                    });
                 }
             });
         }
@@ -272,21 +272,21 @@ if (process.argv[2] === "do-what-it-says") {
                         console.log(tweets[i].text);
                         console.log(tweets[i].created_at);
                         console.log("-----------------------");
-                        fs.appendFile("../log.txt", tweets[i].text, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-                fs.appendFile("../log.txt", tweets[i].created_at, function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
-                fs.appendFile("../log.txt", "-----------------------", function(err){
-                    if (err) {
-                        console.log(err);
-                    }
-                });
+                        fs.appendFile("../log.txt", tweets[i].text, function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
+                        fs.appendFile("../log.txt", tweets[i].created_at, function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
+                        fs.appendFile("../log.txt", "-----------------------", function(err) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
                     }
                 } else {
                     console.log("error");
