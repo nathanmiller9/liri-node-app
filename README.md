@@ -18,7 +18,7 @@
 ### apis
 
 ## Explanation of Code
-### used many new skills in node.js including:
+### Used many new skills in node.js including:
   - require
   - exports
   - constructors
